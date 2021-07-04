@@ -40,10 +40,8 @@ const ExpenseForm = (props) => {
   };
 
   const [isFormValid, setIsValid] = useState(true);
-  console.log({ isFormValid });
 
   const addExpense = (event) => {
-    console.log("callled");
     event.preventDefault();
     const payload = {
       title: enteredTitle,
@@ -56,7 +54,6 @@ const ExpenseForm = (props) => {
         return;
       }
     }
-    console.log({ isFormValid });
     props.onNewExpense(payload);
     setEnteredTitle("");
     setEnteredAmount("");
